@@ -1,0 +1,19 @@
+stages:
+- name: 运行脚本
+  steps:
+  - runScriptConfig:
+      image: java:8
+      shellScript: mvn clean package
+- name: 构建并发布镜像
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: springbootdemo:v1
+      pushRemote: true
+      registry: 192.168.72.3
+- name: 部署YAML
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
