@@ -2,7 +2,7 @@ stages:
 - name: compile
   steps:
   - runScriptConfig:
-      image: 192.168.72.3:11080/library/maven:latest
+      image: harbor.wildpig.com:11080/library/maven
       shellScript: mvn clean package
 - name: build
   steps:
