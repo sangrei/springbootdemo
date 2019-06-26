@@ -2,7 +2,7 @@ stages:
 - name: compile
   steps:
   - runScriptConfig:
-      image: java:8
+      image: harbor.wildpig.com:11080/library/maven
       shellScript: mvn clean package
 - name: publish
   steps:
