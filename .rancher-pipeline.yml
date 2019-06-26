@@ -1,0 +1,19 @@
+stages:
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: 192.168.72.3:11080/library/maven:latest
+      shellScript: mvn clean package
+- name: build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: springbootdemo:v1
+      pushRemote: true
+      registry: harbor.wildpig.com:11080
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
