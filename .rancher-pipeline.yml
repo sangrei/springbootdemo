@@ -9,7 +9,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: library/springbootdemo:v1
+      tag: springbootdemo
       pushRemote: true
       registry: 192.168.72.3:11080
 - name: deploy
