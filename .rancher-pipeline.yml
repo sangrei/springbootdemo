@@ -13,7 +13,7 @@ stages:
       registry: 192.168.72.3:11080
   - env:
       PLUGIN_DEBUG: "true"
-      PLUGIN_INSECURE: "true" 
+      PLUGIN_INSECURE: "true"
 - name: deploy
   steps:
   - applyYamlConfig:
