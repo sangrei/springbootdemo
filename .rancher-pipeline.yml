@@ -2,7 +2,7 @@ stages:
 - name: compile
   steps:
   - runScriptConfig:
-      image: 192.168.72.3:11080/library/maven
+      image: maven:3.6.0-jdk-8-alpine
       shellScript: mvn clean package
 - name: build
   steps:
