@@ -10,7 +10,7 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: springbootdemo
-      registry: 127.0.0.1:34389
+      registry: 192.168.72.3:11080
 - name: deploy
   steps:
   - applyYamlConfig:
