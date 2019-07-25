@@ -9,7 +9,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: library/springbootdemo:v0.1
+      tag: sangrei/springbootdemo:v0.1
       registry: harbor.wildpig.com:11443
 - name: deploy
   steps:
