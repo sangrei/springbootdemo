@@ -10,7 +10,8 @@ stages:
       dockerfilePath: ./Dockerfile
       buildContext: .
       tag: sangrei/springbootdemo:v0.1
-      registry: harbor.wildpig.com:11443
+      pushRemote: true
+      registry: index.docker.io
 - name: deploy
   steps:
   - applyYamlConfig:
