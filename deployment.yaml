@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
       - name: springbootdemo
-        image: 192.168.72.3:11080/library/springbootdemo:v1
+        image: sangrei/springbootdemo:v0.1
         ports:
         - containerPort: 80
 
