@@ -1,4 +1,4 @@
-FROM 192.168.72.3:11443/library/alpine-oraclejre8:slim
+FROM sangrei/alpine-oraclejre8:slim
 MAINTAINER sangrei@163.com
 ADD target/demo-0.0.1-SNAPSHOT.jar /app.jar
 EXPOSE 80
