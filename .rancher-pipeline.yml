@@ -11,7 +11,7 @@ stages:
       buildContext: .
       tag: library/springbootdemo:${CICD_EXECUTION_SEQUENCE}
       pushRemote: true
-      registry: 192.168.72.3:11080
+      registry: harbor.wildpig.com:11443
 - name: deploy
   steps:
   - applyYamlConfig:
