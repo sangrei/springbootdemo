@@ -9,8 +9,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: library/springbootdemo:${CICD_EXECUTION_SEQUENCE}
-      pushRemote: true
+      tag: library/springbootdemo:v0.1
       registry: harbor.wildpig.com:11443
 - name: deploy
   steps:
